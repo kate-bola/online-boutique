@@ -1,0 +1,40 @@
+<div class="container">
+
+
+    {{#if errors}}
+
+        {{#each errors}}
+            <div class="row col-md-offset-2">
+                <div class="alert alert-danger col-md-4"> {{ msg }}</div>
+            </div>
+        {{/each}}
+
+    {{/if}}
+
+    <form action="../users/loginUser" method="post">
+        <div class="row col-lg-offset-2">
+
+            <h3 style="color: orangered"> Login in to your account </h3>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Username (your registration email)
+                    <input type="email" class="form-control" name="username">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    Password
+                    <input type="password" class="form-control" name="password">
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-2">
+                    <input type="submit" class="btn btn-md" style="background-color: orangered; color: white" value="Login" name="submit">
+                </div>
+                <a href="/users/sign-up" class="glyphicon glyphicon-user btn" style="background-color: orangered; color: #ffffff;"> Create account</a>
+            </div>
+        </div>
+        <br><br><br>
+    </form>
+</div>
